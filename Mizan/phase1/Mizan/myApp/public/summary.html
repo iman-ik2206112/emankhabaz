@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary Report</title>
+    <link rel="stylesheet" href="./css/summary.css" />
+    <link rel="stylesheet" href="./css/navStyle.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/nav.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="./img/Mizan.png" width="150rem" />
+        <ul>
+          <li><a href="./GetAssessment.html">Assessments</a></li>
+          <li><a href="./Calendar.html">Calendar</a></li>
+          <li><a href="./GetComment.html">Comments</a></li>
+          <li><a href="./summary.html">Courses Summary</a></li>
+          <li><a href="./login.html" id="logout" class="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="table">
+      <h2>Courses Workload Summary Report</h2>
+      <p class="loading">Loading...</p>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">Course</th>
+            <th rowspan="2">Course name</th>
+            <th colspan="4">Number of</th>
+            <th rowspan="2">Number of Assessments</th>
+            <th rowspan="2">Total Effort Hours</th>
+          </tr>
+          <tr>
+            <th>Homework</th>
+            <th>Quizzes</th>
+            <th>Project Phases</th>
+            <th>Exams</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- chart -->
+    <div>
+      <h3 style="text-align: center">Effort hours chart</h3>
+      <canvas id="effortChart"></canvas>
+    </div>
+
+    <script type="module" src="./js/logout.js"></script>
+    <script type="module" src="./js/summary.js"></script>
+  </body>
+</html>

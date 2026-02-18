@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d8d8d8;
+}
+
+.header {
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-right: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.main {
+  padding: 0 0 0 0;
+}
+
+.form {
+  max-width: 500px;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(7, 104, 179, 0.15);
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.title {
+  background-color: #007bff;
+  color: white;
+  padding: 1.25rem;
+  margin: -2rem -2rem 2rem;
+  border-radius: 16px 16px 0 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.submit-button,
+.reset-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  flex: 1;
+  border: none;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #024286;
+}
+
+.reset-button {
+  background-color: gray;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: rgb(81, 77, 77);
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    padding: 1.5rem;
+    max-width: 80%;
+  }
+
+  .title {
+    margin: -1.5rem -1.5rem 1.5rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+}

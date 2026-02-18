@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Mohamed Saleh",
+    "email": "mohamed@education.qu",
+    "password": "m.mohamed",
+    "role": "coordinator",
+    "courses": ["CS101", "CS201"]
+  },
+  {
+    "name": "Hissa Essa",
+    "email": "hissa@education.qu",
+    "password": "h.hissa",
+    "role": "instructor",
+    "courses": ["CS101","WD301"]
+  },
+  {
+    "name": "Saleh Abdullah",
+    "email": "saleh@education.qu",
+    "password": "s.saleh",
+    "role": "instructor",
+    "courses": ["CS201"]
+  },
+  {
+    "name": "Dina Ayad",
+    "email": "dina@education.qu",
+    "password": "d.dina",
+    "role": "student",
+    "courses": ["CS101", "CS201"]
+  },
+  {
+    "name": "Nora Ahmed",
+    "email": "nora@education.qu",
+    "password": "n.nora",
+    "role": "student",
+    "courses": ["CS201", "WD301"]
+  },
+  {
+    "name": "Sara Mohamed",
+    "email": "sara@education.qu",
+    "password": "s.sara",
+    "role": "student",
+    "courses": ["WD301"]
+  },
+  {
+    "name": "Fatima Mohamed",
+    "email": "fatima@education.qu",
+    "password": "f.fatima",
+    "role": "student",
+    "courses": ["WD301","CS101"]
+  }
+]

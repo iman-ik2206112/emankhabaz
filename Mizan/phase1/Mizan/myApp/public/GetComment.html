@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Comments</title>
+    <link rel="stylesheet" href="./css/Comment.css" />
+    <link rel="stylesheet" href="./css/navStyle.css" />
+    <script src="./js/nav.js"></script>
+    <script src="./js/GetComment.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="./img/Mizan.png" width="150rem" />
+        <ul>
+          <li><a href="./GetAssessment.html">Assessments</a></li>
+          <li><a href="./Calendar.html">Calendar</a></li>
+          <li><a href="./GetComment.html">Comments</a></li>
+          <li><a href="./summary.html">Courses Summary</a></li>
+          <li><a href="#" id="logout" class="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <button class="add-comment">Add Comment</button>
+        <div class="comments-section">
+          <h2>Comments</h2>
+          <label for="course">Select Course</label>
+          <select id="course">
+            <option value="" default disabled>-</option>
+            <option value="all" selected>All Courses</option>
+          </select>
+          <table>
+            <thead>
+              <tr>
+                <th>Course</th>
+                <th>Title</th>
+                <th>Comment</th>
+                <th>Author</th>
+                <th>Date</th>
+                <!-- <th>Instructor Response</th> -->
+              </tr>
+            </thead>
+            <tbody id="commentbody"></tbody>
+            <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>()
+                        <p id="response-display-1"></p>
+                        <input type="text" id="response-1" placeholder="Enter response">
+                        <button">Submit</button>
+                    </td>
+                </tr> -->
+          </table>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="./js/logout.js"></script>
+</html>

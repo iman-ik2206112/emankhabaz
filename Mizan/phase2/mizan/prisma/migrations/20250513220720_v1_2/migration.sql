@@ -1,0 +1,42 @@
+/*
+  Warnings:
+
+  - The primary key for the `Assessment` table will be changed. If it partially fails, the table could be left without primary key constraint.
+  - You are about to alter the column `id` on the `Assessment` table. The data in that column could be lost. The data in that column will be cast from `BigInt` to `Int`.
+  - The primary key for the `Comment` table will be changed. If it partially fails, the table could be left without primary key constraint.
+  - You are about to alter the column `id` on the `Comment` table. The data in that column could be lost. The data in that column will be cast from `BigInt` to `Int`.
+
+*/
+-- RedefineTables
+PRAGMA defer_foreign_keys=ON;
+PRAGMA foreign_keys=OFF;
+CREATE TABLE "new_Assessment" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "sectionCRN" TEXT NOT NULL,
+    "type" TEXT NOT NULL,
+    "title" TEXT NOT NULL,
+    "effortHours" INTEGER NOT NULL,
+    "weight" INTEGER NOT NULL,
+    "dueDate" DATETIME NOT NULL,
+    CONSTRAINT "Assessment_sectionCRN_fkey" FOREIGN KEY ("sectionCRN") REFERENCES "Section" ("crn") ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT "Assessment_type_fkey" FOREIGN KEY ("type") REFERENCES "AssessmentType" ("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+INSERT INTO "new_Assessment" ("dueDate", "effortHours", "id", "sectionCRN", "title", "type", "weight") SELECT "dueDate", "effortHours", "id", "sectionCRN", "title", "type", "weight" FROM "Assessment";
+DROP TABLE "Assessment";
+ALTER TABLE "new_Assessment" RENAME TO "Assessment";
+CREATE TABLE "new_Comment" (
+    "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    "sectionCRN" TEXT NOT NULL,
+    "authorId" INTEGER NOT NULL,
+    "title" TEXT,
+    "content" TEXT NOT NULL,
+    "createdDate" DATETIME NOT NULL,
+    "replyToCommentId" BIGINT,
+    CONSTRAINT "Comment_authorId_fkey" FOREIGN KEY ("authorId") REFERENCES "User" ("id") ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT "Comment_sectionCRN_fkey" FOREIGN KEY ("sectionCRN") REFERENCES "Section" ("crn") ON DELETE CASCADE ON UPDATE CASCADE
+);
+INSERT INTO "new_Comment" ("authorId", "content", "createdDate", "id", "replyToCommentId", "sectionCRN", "title") SELECT "authorId", "content", "createdDate", "id", "replyToCommentId", "sectionCRN", "title" FROM "Comment";
+DROP TABLE "Comment";
+ALTER TABLE "new_Comment" RENAME TO "Comment";
+PRAGMA foreign_keys=ON;
+PRAGMA defer_foreign_keys=OFF;

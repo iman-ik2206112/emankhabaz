@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Assessment</title>
+    <link rel="stylesheet" href="./css/AddAssessment.css" />
+    <link rel="stylesheet" href="./css/navStyle.css" />
+    <script src="./js/nav.js"></script>
+    <script src="./js/updateAssessment.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="./img/Mizan.png" width="150rem" />
+        <ul>
+          <li><a href="GetAssessment.html">Assessments</a></li>
+          <li><a href="./Calendar.html">Calendar</a></li>
+          <li><a href="./GetComment.html">Comments</a></li>
+          <li><a href="summary.html">Courses Summary</a></li>
+          <li><a href="#" id="logout" class="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="getAssesment">
+      <form class="AddAssesment">
+        <h2>Add Assessment</h2>
+
+        <label for="type">Type</label>
+        <select id="type" name="type" required>
+          <option value="" selected disabled>-</option>
+          <option value="assignment">Assignment</option>
+          <option value="quiz">Quiz</option>
+          <option value="midterm">Midterm Exam</option>
+          <option value="final">Final Exam</option>
+          <option value="project">Project</option>
+        </select>
+        <label for="title">Title</label>
+        <input id="title" name="title" required />
+        <label for="date">Due Date</label>
+        <input id="date" type="date" required />
+        <label for="hours">Effort Hours</label>
+        <input id="hours" type="number" min="1" required />
+        <label for="weight">Weight ( % percentage)</label>
+        <input id="weight" type="number" min="1" max="100" required />
+        <button type="submit" class="addAssess">Add Assessment</button>
+      </form>
+    </div>
+  </body>
+  <script type="module" src="./js/logout.js"></script>
+</html>

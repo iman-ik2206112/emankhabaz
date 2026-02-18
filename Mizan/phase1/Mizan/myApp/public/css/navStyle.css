@@ -1,0 +1,48 @@
+/* BG color */
+body,
+html {
+  height: 99%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #d8d8d8;
+}
+header {
+  width: 100%;
+}
+.logo {
+  display: flex;
+  align-items: start;
+  padding-left: 1rem;
+}
+
+nav ul {
+  overflow: hidden;
+}
+nav li {
+  float: left;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #b2b9e0;
+}
+
+nav li a {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  display: block;
+  color: rgb(0, 0, 0);
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  background-color: #515672;
+}
+
+/* .active {
+    background-color: #04AA6D;
+    color: white;
+  } */

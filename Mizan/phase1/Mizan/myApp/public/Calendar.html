@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/calendar.css">
+    <link rel="stylesheet" href="./css/navStyle.css">
+    <script src="./js/nav.js"></script>
+    <script type='module' src="./js/calendar.js"></script>
+
+</head>
+<body>
+    <header>
+      <nav>
+        <img class="logo" src="./img/Mizan.png" width="150rem">
+        <ul>
+            <li><a href="./GetAssessment.html">Assessments</a></li>
+            <li><a href="./Calendar.html">Calendar</a></li>
+            <li><a href="./GetComment.html">Comments</a></li>
+            <li><a href="./summary.html">Courses Summary</a></li>
+            <li><a href="#" id="logout" class="logout">Logout</a></li>
+        </ul>
+    </nav>
+    </header>
+  <div class="display_calendar">
+    <div class="calendar">
+      <div class="calendar-header">
+        <button id="prev-month">‹</button>
+        <div id="month-year"></div>
+        <button id="next-month">›</button>
+      </div>
+      <div class="calendar-body">
+        <div class="calendar-weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="calendar-dates">
+          <!-- Dates here -->
+        </div>
+      </div>
+    </div>
+    <div class="assessments-due">
+      <!-- use js to edit date selected to show assessments due-->
+      date selected 
+      <div class="assessment">
+        <!-- example -->
+        <p class="name">CourseName-Asessmenttitle</p>
+        <p>Type: </p>
+        <p>Effort hours: </p>
+        <p>Weight: </p>
+      </div>
+      
+  </div>  
+  
+  
+</body>
+<script type="module" src="./js/logout.js"></script>
+</html>

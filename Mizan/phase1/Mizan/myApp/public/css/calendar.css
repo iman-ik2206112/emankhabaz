@@ -1,0 +1,118 @@
+.current-date {
+  background-color: #889aff;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.calendar-dates .day-with-assessment {
+  border: solid 0.2rem #6e48a1;
+  color: #000000;
+  border-radius: 0.5rem;
+}
+
+.date-selected {
+  border: solid 0.2rem #000000;
+  color: #fff;
+  border-radius: 0.5rem;
+  background-color: #747474;
+}
+.calendar-dates div:hover {
+  background-color: #cacaca;
+  border-radius: 0.5rem;
+}
+
+.calendar-dates .date-selected:hover {
+  background-color: #5f5e5e;
+}
+
+.calendar-dates .current-date:hover {
+  background-color: #1e4c7e;
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+.calendar-dates div {
+  cursor: pointer;
+  border: solid 0.2rem #fff;
+}
+
+/* look of general calendar */
+.display_calendar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.calendar {
+  margin: 1rem;
+  font-family: Arial, sans-serif;
+  width: 580px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.calendar-header button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+#month-year {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.calendar-weekdays,
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays div,
+.calendar-dates div {
+  text-align: center;
+  padding: 10px;
+}
+
+.calendar-weekdays {
+  background-color: #eaeef3;
+}
+
+.calendar-weekdays div {
+  font-weight: bold;
+}
+
+/* The right box */
+.assessments-due {
+  margin: 1rem;
+  padding: 1rem;
+  font-family: Arial, sans-serif;
+  width: 580px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.assessment .name {
+  font-weight: bold;
+}
+@media (max-width: 700px) {
+  .display_calendar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .assessments-due {
+    width: 87%;
+    margin: 1rem;
+  }
+
+  .calendar {
+    width: 90%;
+    margin: 1rem;
+  }
+}

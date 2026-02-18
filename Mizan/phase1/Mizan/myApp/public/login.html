@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <title>Workload Management</title>
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="./img/Mizan.png" width="150rem" />
+    </header>
+    <div class="container">
+      <main class="main">
+        <form class="form" id="login-form">
+          <h2 class="title">Login</h2>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-input"
+              placeholder="someone@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-input"
+              required
+            />
+          </div>
+
+          <div class="form-actions">
+            <div class="button-group">
+              <button type="submit" class="submit-button">Login</button>
+              <button type="reset" class="reset-button">Reset</button>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+  <script type="module" src="./js/login.js"></script>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Comments</title>
+    <link rel="stylesheet" href="./css/Comment.css" />
+    <link rel="stylesheet" href="./css/navStyle.css" />
+    <script src="./js/nav.js"></script>
+    <script src="./js/AddComment.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="./img/Mizan.png" width="150rem" />
+        <ul>
+          <li><a href="./GetAssessment.html">Assessments</a></li>
+          <li><a href="./Calendar.html">Calendar</a></li>
+          <li><a href="./GetComment.html">Comments</a></li>
+          <li><a href="./summary.html">Courses Summary</a></li>
+          <li><a href="#" id="logout" class="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h2>Add Response</h2>
+      <form class="comment-form">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="body">Comment:</label>
+        <textarea id="body" name="body" rows="4" required></textarea>
+
+        <button type="submit" class="Addcomment">Post Comment</button>
+      </form>
+    </div>
+  </body>
+  <script type="module" src="./js/logout.js"></script>
+</html>

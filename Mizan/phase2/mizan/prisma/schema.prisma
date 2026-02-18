@@ -1,0 +1,74 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model AssessmentType {
+  id          String       @id
+  label       String
+  Assessments Assessment[]
+}
+
+model Semester {
+  id        String    @id
+  label     String
+  isDefault Boolean
+  sections  Section[]
+}
+
+model User {
+  id                 Int       @id
+  firstName          String
+  lastName           String
+  email              String    @unique
+  password           String
+  role               String
+  program            String
+  registeredSections Section[] @relation("StudentSections")
+  comments           Comment[]
+}
+
+model Assessment {
+  id             Int         @id @default(autoincrement())
+  sectionCRN     String
+  sections       Section        @relation(fields: [sectionCRN], references: [crn], onDelete: Cascade, onUpdate: Cascade)
+  type           String
+  AssessmentType AssessmentType @relation(fields: [type], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  title          String
+  effortHours    Int
+  weight         Int
+  dueDate        DateTime
+}
+
+model Comment {
+  id               Int      @id @default(autoincrement())
+  sectionCRN       String
+  authorId         Int
+  title            String?
+  content          String
+  createdDate      DateTime
+  replyToCommentId BigInt?
+  user             User    @relation(fields: [authorId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  sections         Section  @relation(fields: [sectionCRN], references: [crn], onDelete: Cascade, onUpdate: Cascade)
+}
+
+model Section {
+  crn              String       @id @unique
+  courseCode       String
+  courseName       String
+  creditHours      Int
+  instructorId     Int
+  program          String
+  semester         String
+  users            User[]       @relation("StudentSections")
+  semesterRelation Semester     @relation(fields: [semester], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  assessments      Assessment[]
+  comments         Comment[]
+}

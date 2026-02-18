@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Assessments</title>
+    <link rel="stylesheet" href="./css/GetAssessment.css" />
+    <link rel="stylesheet" href="./css/navStyle.css" />
+    <script src="./js/nav.js"></script>
+    <script src="./js/GetAssessment.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="./img/Mizan.png" width="150rem" />
+        <ul>
+          <li><a href="./GetAssessment.html">Assessments</a></li>
+          <li><a href="./Calendar.html">Calendar</a></li>
+          <li><a href="./GetComment.html">Comments</a></li>
+          <li><a href="./summary.html">Courses Summary</a></li>
+          <li><a href="#" id="logout" class="logout">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="getassessment-main">
+      <!-- <button id="add-assessment">Add Assessment</button> -->
+      <div class="getassessment">
+        <!-- <div class="getassessment-header"> -->
+
+        <h2>Get Assessments</h2>
+        <!-- </div> -->
+        <label id="course-label" for="course">Choose a course (loading):</label>
+        <select id="course" name="course">
+          <option value="all">Show All</option>
+        </select>
+        <div id="loading-data"></div>
+        <table>
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Title</th>
+              <th>Type</th>
+              <th>Due Date</th>
+              <th>Effort Hours</th>
+              <th>Weight</th>
+            </tr>
+          </thead>
+          <tbody id="assessmentbody"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="./js/logout.js"></script>
+</html>
