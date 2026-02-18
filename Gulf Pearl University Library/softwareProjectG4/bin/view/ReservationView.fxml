@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Pos?>
+
+<GridPane fx:controller="controller.LibraryMenuController"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="12" vgap="14"
+          style="-fx-background-color: #f4f7fb;">
+
+    <padding>
+        <Insets top="25" right="25" bottom="25" left="25"/>
+    </padding>
+
+    <Label text="Reserve Item" 
+           GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2"
+           style="-fx-text-fill: #2b4c7e; -fx-font-size: 20;"/>
+
+    <Label text="Membership ID:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="membershipIDField"
+    		promptText="Enter Membership ID"
+               style="-fx-background-radius: 8; -fx-background-color: white;"
+               GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <Label text="Call Number:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="callNumberField"
+    		promptText="Enter Call Number"
+               style="-fx-background-radius: 8; -fx-background-color: white;"
+               GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+    <HBox spacing="20"
+          alignment="CENTER"
+          GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2">
+
+        <children>
+
+            <Button fx:id="reserveButton" text="Reserve Item" onAction="#reserveItem"
+                    style="-fx-background-color: #3c6997; -fx-text-fill: white; -fx-background-radius: 10;"
+                    prefWidth="160"/>
+
+            <Button fx:id="backButton" text="Back" onAction="#goBack"
+                    style="-fx-background-color: #a7bbc7; -fx-text-fill: black; -fx-background-radius: 10;"
+                    prefWidth="160"/>
+
+        </children>
+    </HBox>
+
+</GridPane>

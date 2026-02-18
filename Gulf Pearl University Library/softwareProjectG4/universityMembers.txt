@@ -1,0 +1,9 @@
+FinanceID,FullName,Address,UniversityID,Amount,isMember,Position
+ACC10001,Ali Ahmed,Doha,UNI1001,2000.0,Yes,student
+ACC10002,Sara Hassan,Al Rayyan,UNI1002,800.0,Yes,student
+ACC20001,Dr. Omar,Al Sadd,UNI2001,3500.0,Yes,staff
+ACC30001,Lina Saleh,West Bay,UNI3001,3000.0,No,student
+ACC30009,Mohammed Ali,Education City,UNI3002,1500.0,No,student
+ACC30003,Eman Ali,Gharrafa,UNI3003,800.0,No,student
+ACC30002,Mona,Airport,UNI3004,2000.0,Yes,student
+ACC30004,Ruaa,Airport,UNI3005,1000.0,Yes,student

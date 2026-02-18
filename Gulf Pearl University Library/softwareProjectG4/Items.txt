@@ -1,0 +1,9 @@
+CallNumber,Type,Title,PublicationYear,ItemStatus,IsReserved,IsBorrowed,MembershipID
+100001,Book,Introduction to Java,2020,Available,Yes,No,M1001
+100002,Book,Data Structures in C,2018,Reserved,Yes,No,M1002
+100003,Book,Algorithms Unlocked,2019,Reserved,Yes,No,
+100005,Digital Media,Machine Learning Lecture,2022,Reserved,Yes,No,M1002
+100006,Magazine,National Geographic March 2023,2023,Available,No,No,
+100007,Magazine,Science Today April 2023,2023,Reserved,Yes,Yes,M1002
+100008,Book,Database Systems,2017,Available,No,No,
+100010,Book,Computer Networks,2016,Available,No,No,
